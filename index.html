@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#090d1b" />
+  <title>ImmersiLearn — AR/VR HCI Training System</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#" data-view="overview"><span class="brand-mark">✦</span><span>Immersi<span class="brand-accent">Learn</span><small>XR LEARNING STUDIO</small></span></a>
+    <div class="workspace-label">WORKSPACE</div>
+    <nav class="nav">
+      <button class="nav-link active" data-view="overview"><span>◫</span> Overview</button>
+      <button class="nav-link" data-view="courses"><span>▤</span> Learning paths <i>04</i></button>
+      <button class="nav-link" data-view="lab"><span>◉</span> Immersive lab <em class="live-dot"></em></button>
+      <button class="nav-link" data-view="arcade"><span>✧</span> Challenge arcade</button>
+      <button class="nav-link" data-view="assessment"><span>▣</span> Assessments</button>
+      <button class="nav-link" data-view="analytics"><span>⌁</span> My analytics</button>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="mentor-card"><div class="mentor-icon">✺</div><div><b>Learning tip</b><p>Short practice sessions improve recall. Try a 10-minute challenge.</p></div></div>
+      <button class="nav-link" data-view="about"><span>ⓘ</span> About this project</button>
+      <div class="profile"><div class="avatar">DL</div><div><b>Demo Learner</b><small>HCI Explorer</small></div><span class="profile-more">•••</span></div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="mobile-menu" id="mobileMenu" aria-label="Toggle menu">☰</button>
+      <div class="breadcrumb">Workspace <span>/</span> <b id="pageCrumb">Overview</b></div>
+      <div class="top-actions"><span class="date-label" id="todayLabel"></span><button class="icon-btn" id="helpBtn" title="Help">?</button><div class="avatar small-avatar">DL</div></div>
+    </header>
+
+    <section class="view active" id="overview">
+      <div class="hero">
+        <div class="hero-copy"><div class="eyebrow"><span class="eyebrow-dot"></span> YOUR XR LEARNING SPACE</div>
+          <h1>Learn by doing.<br/><span>Experience the impossible.</span></h1>
+          <p>Explore immersive environments, practise real-world skills, and turn complex concepts into memorable experiences.</p>
+          <div class="hero-actions"><button class="btn btn-primary" data-go="lab">Enter immersive lab <span>↗</span></button><button class="btn btn-ghost" data-go="courses">Explore learning paths</button></div>
+          <div class="hero-foot"><div class="tiny-avatars"><span>✦</span><span>◈</span><span>◉</span></div><small>Designed around human-centred learning</small></div>
+        </div>
+        <div class="hero-visual"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="planet"><div class="planet-core">XR</div><span class="planet-ring"></span></div><div class="float-card float-top"><span class="float-icon">◉</span><div><b>Immersion mode</b><small>Interactive simulation</small></div><span class="status-pill">READY</span></div><div class="float-card float-bottom"><span class="spark">✦</span><div><b>Learn · Practise · Reflect</b><small>One experience at a time</small></div></div><div class="visual-caption">FIG 01 <span>— IMMERSIVE LEARNING, REIMAGINED</span></div></div>
+      </div>
+
+      <div class="section-heading"><div><div class="eyebrow">YOUR PROGRESS</div><h2>Learning at a glance</h2></div><button class="text-btn" data-go="analytics">View detailed analytics ↗</button></div>
+      <div class="stats-grid">
+        <article class="stat-card"><div class="stat-top"><span>Learning progress</span><span class="stat-icon purple">◒</span></div><strong id="progressStat">32%</strong><div class="progress-track"><span id="progressBar" style="width:32%"></span></div><small>Across all learning paths</small></article>
+        <article class="stat-card"><div class="stat-top"><span>XP earned</span><span class="stat-icon orange">✧</span></div><strong id="xpStat">420 <small>XP</small></strong><div class="stat-note positive">↗ Keep your momentum going</div><small>Experience points</small></article>
+        <article class="stat-card"><div class="stat-top"><span>Challenges completed</span><span class="stat-icon cyan">✓</span></div><strong id="challengeStat">3</strong><div class="stat-note">Your practice streak starts here</div><small>Quizzes and mini-games</small></article>
+        <article class="stat-card"><div class="stat-top"><span>Time in the lab</span><span class="stat-icon green">◷</span></div><strong id="timeStat">18 <small>min</small></strong><div class="stat-note">Hands-on exploration</div><small>Demo session estimate</small></article>
+      </div>
+      <div class="section-heading compact"><div><div class="eyebrow">PICK UP WHERE YOU LEFT OFF</div><h2>Continue your journey</h2></div></div>
+      <div class="continue-grid">
+        <article class="continue-card course-card-one"><div class="course-symbol">◈</div><div class="course-meta">MODULE 01 · FOUNDATIONS</div><h3>Introduction to Extended Reality</h3><p>Understand the XR spectrum: AR, VR and MR.</p><div class="card-bottom"><span>12 min · Beginner</span><button class="round-arrow" data-course="xr">↗</button></div></article>
+        <article class="continue-card course-card-two"><div class="course-symbol">⌖</div><div class="course-meta">MODULE 02 · DESIGN</div><h3>Human-Centred Interaction</h3><p>Discover presence, feedback and usability.</p><div class="card-bottom"><span>18 min · Intermediate</span><button class="round-arrow" data-course="hci">↗</button></div></article>
+        <article class="continue-card course-card-three"><div class="course-symbol">⬡</div><div class="course-meta">MODULE 03 · PRACTICE</div><h3>Virtual Safety Training</h3><p>Make decisions in a safe virtual environment.</p><div class="card-bottom"><span>15 min · Applied</span><button class="round-arrow" data-course="safety">↗</button></div></article>
+      </div>
+    </section>
+
+    <section class="view" id="courses">
+      <div class="page-intro"><div class="eyebrow">STRUCTURED LEARNING</div><h1>Learning paths</h1><p>Build your XR knowledge through focused modules, practical activities and knowledge checks.</p></div>
+      <div class="filter-row"><div class="filter-tabs"><button class="filter active" data-filter="all">All paths</button><button class="filter" data-filter="foundation">Foundations</button><button class="filter" data-filter="design">HCI design</button><button class="filter" data-filter="practice">Practical</button></div><span class="muted" id="courseCount">4 learning paths</span></div>
+      <div class="course-list" id="courseList"></div>
+    </section>
+
+    <section class="view" id="lab">
+      <div class="page-intro"><div class="eyebrow"><span class="eyebrow-dot"></span> INTERACTIVE SIMULATION</div><h1>Immersive lab</h1><p>Explore a virtual learning space. Select objects, inspect hotspots and practise spatial interaction.</p></div>
+      <div class="lab-layout">
+        <div class="lab-stage-wrap"><div class="stage-toolbar"><span><i class="live-dot"></i> LIVE SIMULATION</span><div><button class="mini-tool" id="resetScene">↻ Reset</button><button class="mini-tool" id="fullscreenBtn">⛶ Expand</button></div></div>
+          <div class="lab-stage" id="labStage"><div class="stage-grid"></div><div class="stage-sun"></div><div class="stage-room"><div class="room-back"></div><div class="room-floor"></div><div class="room-left"></div><div class="room-right"></div><div class="vr-pedestal"></div><button class="hotspot hotspot-one" data-hotspot="headset" aria-label="Inspect VR headset"><span>＋</span></button><button class="hotspot hotspot-two" data-hotspot="controller" aria-label="Inspect controller"><span>＋</span></button><button class="hotspot hotspot-three" data-hotspot="panel" aria-label="Inspect control panel"><span>＋</span></button><div class="stage-label">XR TRAINING ROOM <small>SELECT A HOTSPOT TO EXPLORE</small></div></div><div class="stage-hud"><span>◉ SIMULATION ACTIVE</span><span id="sceneCoords">SCENE 01 / 03</span></div></div>
+          <div class="stage-controls"><span class="muted">Interaction controls</span><div><kbd>CLICK</kbd> Select object <kbd>R</kbd> Reset view</div></div>
+        </div>
+        <aside class="lab-info"><div class="panel-kicker">OBJECT INSPECTOR</div><div class="inspector-icon" id="inspectorIcon">◉</div><h2 id="inspectorTitle">Welcome to the lab</h2><p id="inspectorText">Choose any glowing hotspot in the virtual room to learn about the object and its role in immersive interaction.</p><div class="inspector-divider"></div><div class="detail-label">LEARNING OBJECTIVE</div><p class="objective" id="inspectorObjective">Identify interactive elements in a virtual environment.</p><div class="detail-label">INTERACTION PRINCIPLE</div><div class="principle-chip" id="inspectorPrinciple">Discoverability</div><button class="btn btn-primary full-btn" id="completeInspection">Mark objective complete <span>✓</span></button><div class="lab-progress"><div><span>Lab objectives</span><b id="labProgressText">0 / 3</b></div><div class="progress-track"><span id="labProgressBar" style="width:0%"></span></div></div></aside>
+      </div>
+      <div class="note-banner"><span>ⓘ</span><div><b>Prototype note</b><p>This browser-based 3D scene demonstrates XR interaction concepts using HTML, CSS and JavaScript. A compatible headset and a WebXR-enabled browser are needed for a true head-mounted VR session.</p></div></div>
+    </section>
+
+    <section class="view" id="arcade">
+      <div class="page-intro"><div class="eyebrow">PLAY TO LEARN</div><h1>Challenge arcade</h1><p>Test your understanding with quick games designed around core HCI and XR concepts.</p></div>
+      <div class="arcade-grid">
+        <article class="game-card"><div class="game-art art-quiz"><span>?</span><i>✦</i><b>01</b></div><div class="game-content"><div class="game-tag">KNOWLEDGE · 5 QUESTIONS</div><h3>XR Quickfire</h3><p>Race through essential AR, VR and MR concepts.</p><button class="btn btn-primary game-start" data-game="quiz">Play challenge <span>→</span></button></div></article>
+        <article class="game-card"><div class="game-art art-match"><span>⇄</span><i>◈</i><b>02</b></div><div class="game-content"><div class="game-tag">MATCHING · 4 PAIRS</div><h3>HCI Match-up</h3><p>Connect interaction principles with their meaning.</p><button class="btn btn-primary game-start" data-game="match">Play challenge <span>→</span></button></div></article>
+        <article class="game-card"><div class="game-art art-spot"><span>◎</span><i>⌖</i><b>03</b></div><div class="game-content"><div class="game-tag">SCENARIO · 3 DECISIONS</div><h3>Design Detective</h3><p>Choose the most human-centred design response.</p><button class="btn btn-primary game-start" data-game="scenario">Play challenge <span>→</span></button></div></article>
+      </div>
+      <div class="game-panel hidden" id="gamePanel"><div class="game-panel-head"><div><div class="eyebrow">ACTIVE CHALLENGE</div><h2 id="gameTitle">XR Quickfire</h2></div><button class="close-btn" id="closeGame">✕</button></div><div id="gameBody"></div></div>
+    </section>
+
+    <section class="view" id="assessment">
+      <div class="page-intro"><div class="eyebrow">CHECK YOUR UNDERSTANDING</div><h1>Knowledge assessment</h1><p>A short assessment covering XR fundamentals, interaction design, usability and immersive safety.</p></div>
+      <div class="assessment-layout"><div class="assessment-card"><div class="assessment-top"><span class="assessment-icon">▣</span><span class="status-pill">10 QUESTIONS</span></div><h2>ImmersiLearn competency check</h2><p>Take this assessment to review the concepts covered in the learning paths. Your score is shown immediately with explanations.</p><div class="assessment-facts"><span>◷ 5–8 minutes</span><span>✧ 100 XP available</span><span>↻ Retake anytime</span></div><button class="btn btn-primary" id="startAssessment">Start assessment <span>→</span></button></div><div class="assessment-side"><h3>Topics covered</h3><div class="topic-row"><span>01</span><div><b>XR foundations</b><small>AR, VR, MR and spatial computing</small></div></div><div class="topic-row"><span>02</span><div><b>HCI principles</b><small>Feedback, affordance and mapping</small></div></div><div class="topic-row"><span>03</span><div><b>Usability & accessibility</b><small>Comfort, inclusion and user control</small></div></div><div class="topic-row"><span>04</span><div><b>Evaluation</b><small>Presence, performance and usability</small></div></div></div></div>
+      <div class="game-panel hidden" id="assessmentPanel"><div class="game-panel-head"><div><div class="eyebrow">ASSESSMENT IN PROGRESS</div><h2 id="assessmentTitle">Question 1 of 10</h2></div><span class="muted" id="assessmentScoreLive">0 correct</span></div><div id="assessmentBody"></div></div>
+    </section>
+
+    <section class="view" id="analytics">
+      <div class="page-intro"><div class="eyebrow">LEARNING INSIGHTS</div><h1>My analytics</h1><p>Track your activity and see how your learning journey is progressing.</p></div>
+      <div class="analytics-grid"><article class="stat-card"><span class="muted">Total XP</span><strong id="analyticsXP">420</strong><small>Earned through activities</small></article><article class="stat-card"><span class="muted">Completed challenges</span><strong id="analyticsChallenges">3</strong><small>Knowledge checks and games</small></article><article class="stat-card"><span class="muted">Lab objectives</span><strong id="analyticsLab">0/3</strong><small>Exploration milestones</small></article></div>
+      <div class="analytics-card"><div class="section-heading"><div><div class="eyebrow">ACTIVITY OVERVIEW</div><h2>Your learning mix</h2></div></div><div class="bar-chart"><div class="bar-col"><div class="bar" style="height:78%"></div><small>Explore</small></div><div class="bar-col"><div class="bar" style="height:48%"></div><small>Learn</small></div><div class="bar-col"><div class="bar" style="height:64%"></div><small>Practise</small></div><div class="bar-col"><div class="bar" style="height:35%"></div><small>Reflect</small></div><div class="bar-col"><div class="bar" style="height:88%"></div><small>Review</small></div></div><p class="chart-caption">Illustrative activity distribution for the demo learner. Complete modules and challenges to update your personal progress.</p></div>
+      <div class="analytics-card"><h3>Achievements</h3><div class="achievement-row"><span>✦</span><div><b>First steps</b><small>Opened your ImmersiLearn workspace</small></div><span class="earned">UNLOCKED</span></div><div class="achievement-row"><span>◉</span><div><b>Explorer</b><small>Inspect all three lab objects</small></div><span id="explorerBadge" class="locked">IN PROGRESS</span></div><div class="achievement-row"><span>✧</span><div><b>Knowledge seeker</b><small>Complete a challenge</small></div><span id="knowledgeBadge" class="locked">IN PROGRESS</span></div></div>
+    </section>
+
+    <section class="view" id="about">
+      <div class="page-intro"><div class="eyebrow">PROJECT OVERVIEW</div><h1>About ImmersiLearn</h1><p>An AR/VR HCI training system concept that combines immersive exploration with active learning.</p></div>
+      <div class="about-grid"><article class="about-card"><div class="about-icon">◎</div><h2>Project vision</h2><p>ImmersiLearn demonstrates how immersive technologies can support experiential learning through interactive environments, guided activities and immediate feedback.</p></article><article class="about-card"><div class="about-icon">⌘</div><h2>HCI focus</h2><p>The interface applies visibility, feedback, consistency, affordances, user control, accessibility and error prevention to make interactions understandable.</p></article><article class="about-card"><div class="about-icon">⬡</div><h2>Technology</h2><p>Built with semantic HTML, modern CSS and vanilla JavaScript. Progress is stored locally in the browser using localStorage. No backend or installation is required.</p></article></div>
+      <div class="analytics-card"><h2>Learning design principles</h2><div class="principles-grid"><div><b>01 · Discoverability</b><p>Make possible actions visible and easy to find.</p></div><div><b>02 · Feedback</b><p>Show the result of every meaningful action.</p></div><div><b>03 · User control</b><p>Allow users to pause, reset and navigate freely.</p></div><div><b>04 · Accessibility</b><p>Use readable contrast, clear labels and keyboard support.</p></div><div><b>05 · Consistency</b><p>Reuse patterns so users can transfer what they learn.</p></div><div><b>06 · Error prevention</b><p>Provide guidance before users make avoidable mistakes.</p></div></div></div>
+    </section>
+
+    <footer class="footer"><span>✦ ImmersiLearn</span><span>AR/VR HCI Training System · Academic prototype</span><span>Built for experiential learning</span></footer>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+  <div class="modal-backdrop hidden" id="modalBackdrop"><div class="modal"><button class="close-btn modal-close" id="modalClose">✕</button><div class="eyebrow">LEARNING MODULE</div><div id="modalContent"></div></div></div>
+  <script src="app.js"></script>
+</body>
+</html>
